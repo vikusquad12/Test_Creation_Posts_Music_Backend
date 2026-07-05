@@ -75,16 +75,16 @@ async function loginUser (req,res){
 
         res.cookie("jwtRadheToken", jwtRadheToken,{
             httpOnly: true,
-            secure: false, // true in production (HTTPS)
-            sameSite: "lax"
+            secure: true, // true in production (HTTPS)
+            sameSite: "none"
         })
 
         res.status(200).json({
             message:"successfully loggin",
-            token: jwtRadheToken,
+            // token: jwtRadheToken,
             username: user.username,
             email:user.email,
-            password: user.password,
+            // password: user.password,
         })
 
 

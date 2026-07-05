@@ -10,7 +10,7 @@ const cors = require('cors')
 const app = express();
 
 app.use(cors({
-  origin: "*",
+  origin: "https://test-creation-posts-music.vercel.app",
   credentials: true
 }))
 app.use(express.json())

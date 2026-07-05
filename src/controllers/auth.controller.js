@@ -31,10 +31,10 @@ async function registerUser (req,res){
 
         res.status(201).json({
             message: "user created",
-            id:user._id,
+            // id:user._id,
             username,
             email,
-            password:hash,
+            // password:hash,
             role
         })
     } catch (err){
